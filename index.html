@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<title>Nearby Coffee</title>
+		  
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		  
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		  
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		  
+		<!-- Bootstrap JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		  
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="styles/style.css">
+		  
+		<!-- Custom Fonts -->
+		<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+				
+	  
+	</head>
+	<body id="page-top" class="index" data-spy="scroll" data-target=".navbar"><!--1-->
+		
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Nearby Coffee</a>
+				</div>				
+				
+			</div>
+		</nav>
+		
+		<header>
+			<section id="profile">
+				<div class="container">
+					<div class="row text-center">
+						<div class="col-sm-4">
+							<h4 id="venueDetailsName"></h4>
+							<img id="venueDetailsImage" src="" class="img-responsive img-circle" alt=""><br>
+							<p id="venueDetailsDistance" class="text-secondary"></p>
+							<p id="venueDetailsPrice" class="text-secondary"></p>
+							<p>Tips:</p>
+							<p><span id="venueDetailsTips"></span></p>
+
+						</div>
+						<!--<div class="col-sm-4">
+							<h4 id="venueDetailsName"></h4>
+							<p id="venueDetailsDistance" class="text-secondary"></p>
+							<p id="venueDetailsPrice" class="text-secondary"></p>
+						</div>-->
+
+						<div class="col-sm-8 offset-2">
+							<button type="button" class="btn btn-lg" onclick="switchViewToMain(true)">Go Back</button>
+
+						</div>
+					</div>
+				</div>
+			</section>
+		</header>
+		
+		<section id="actions">
+			<div class="container">
+				<div class="row">
+					<div id="actionsCarousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#actionsCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#actionsCarousel" data-slide-to="1"></li>
+							<li data-target="#actionsCarousel" data-slide-to="2"></li>
+							<li data-target="#actionsCarousel" data-slide-to="3"></li>							
+						</ol>
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<div class="col-sm-4">
+									<div class="team-member">
+										<img src="" class="img-responsive img-rounded" alt="">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="actions-item">
+										<img src="" class="img-responsive img-rounded" alt="">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="actions-item">
+										<img src="" class="img-responsive img-rounded" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-sm-4">
+									<div class="actions-item">
+										<img src="" class="img-responsive img-rounded" alt="">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="actions-item">
+										<img src="" class="img-responsive img-rounded" alt="">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="actions-item">
+										<img src="" class="img-responsive img-rounded" alt="">
+									</div>
+								</div>
+							
+							</div>
+							<div class="item">
+								<div class="col-sm-4">
+									<div class="actions-item">
+										<img src="" class="img-responsive img-rounded" alt="">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="actions-item">
+										<img src="" class="img-responsive img-rounded" alt="">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="actions-item">
+										<img src="" class="img-responsive img-rounded" alt="">
+									</div>
+								</div>
+							
+							</div>
+							<div class="item">
+								<div class="col-sm-4">
+									<div class="actions-item">
+										<img src="" class="img-responsive img-rounded" alt="">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="actions-item">
+										<img src="" class="img-responsive img-rounded" alt="">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="actions-item">
+										<img src="" class="img-responsive img-rounded" alt="">
+									</div>
+								</div>							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+				
+		<!-- Cofee Shops -->
+		<section id="shop">
+			<div class="container-fluid">
+			
+				<div class="row">
+					<div class="col-sm-12 text-center">
+						<h2>Nearby Coffee</h2>
+						<h3 class="text-secondary">A Realy Good Coffee!</h3>
+					</div>
+					<div class="col-sm-12 text-center">
+						<select id="sortBy" onchange="showVenues(venuesGlobal,this.value)">
+							<option value="Distance">Sorted By Distance</option>
+							<option value="PriceTier">Sorted By Price</option>
+							<option value="Rating">Sorted By Rating</option>
+						</select>
+					</div>
+				</div>
+				<div class="row col-sm-12" id="products">
+
+				</div>
+			</div>
+		</section>
+
+
+				
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<span class="copyright">Copyright &copy; Vladimir Tešić 2017</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Custom JavaScript -->
+		<script src="scripts/main.js"></script>		
+	</body>
+	
+</html>
