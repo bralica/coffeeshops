@@ -3,7 +3,7 @@ var oauth_token = 'RKO1PVZEEEL0YOS4FFYUQXQ23MJ5SNETGVW4HM044KEVRVGO';
 var exploreVenuesURL = "https://api.foursquare.com/v2/venues/explore";
 var venueDetailsURL = "https://api.foursquare.com/v2/venues/";
 
-var radius = "5000";
+var radius = "1000";
 var limit = '10';
 var query = "coffee";
 
